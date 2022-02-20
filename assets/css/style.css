@@ -1,10 +1,3 @@
-/**
-* Template Name: Moderna - v4.8.0
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -73,6 +66,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #header.header-scrolled {
   background: rgba(30, 67, 86, 0.8);
   height: 60px;
+  box-shadow: 0px 2px 20px rgba(77, 77, 77, 0.459);
 }
 #header .logo h1 {
   font-family: "Raleway", sans-serif;
@@ -155,7 +149,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: rgb(221, 221, 221);
+  border-radius: 10%;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -293,6 +288,10 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   height: 90vh;
   overflow: hidden;
   position: relative;
+}
+#hero h2{
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 #hero::after {
   content: "";
@@ -561,12 +560,12 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Our Services
+# Our disclosure
 --------------------------------------------------------------*/
-.services {
+.disclosure {
   padding-bottom: 20px;
 }
-.services .icon-box {
+.disclosure .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -577,7 +576,7 @@ section {
   text-align: center;
   border: 1px solid #fff;
 }
-.services .icon {
+.disclosure .icon {
   margin: 0 auto 20px auto;
   padding-top: 17px;
   display: inline-block;
@@ -586,61 +585,133 @@ section {
   width: 72px;
   height: 72px;
 }
-.services .icon i {
+.disclosure .icon i {
   font-size: 36px;
   line-height: 1;
 }
-.services .title {
+.disclosure .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
-.services .title a {
+.disclosure .title a {
   color: #111;
 }
-.services .description {
+.disclosure .description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
 }
-.services .icon-box-pink .icon {
+.disclosure .icon-box-pink .icon {
   background: #fceef3;
 }
-.services .icon-box-pink .icon i {
+.disclosure .icon-box-pink .icon i {
   color: #ff689b;
 }
-.services .icon-box-pink:hover {
+.disclosure .icon-box-pink:hover {
   border-color: #ff689b;
 }
-.services .icon-box-cyan .icon {
+.disclosure .icon-box-cyan .icon {
   background: #e6fdfc;
 }
-.services .icon-box-cyan .icon i {
+.disclosure .icon-box-cyan .icon i {
   color: #3fcdc7;
 }
-.services .icon-box-cyan:hover {
+.disclosure .icon-box-cyan:hover {
   border-color: #3fcdc7;
 }
-.services .icon-box-green .icon {
+.disclosure .icon-box-green .icon {
   background: #eafde7;
 }
-.services .icon-box-green .icon i {
+.disclosure .icon-box-green .icon i {
   color: #41cf2e;
 }
-.services .icon-box-green:hover {
+.disclosure .icon-box-green:hover {
   border-color: #41cf2e;
 }
-.services .icon-box-blue .icon {
+.disclosure .icon-box-blue .icon {
   background: #e1eeff;
 }
-.services .icon-box-blue .icon i {
+.disclosure .icon-box-blue .icon i {
   color: #2282ff;
 }
-.services .icon-box-blue:hover {
+.disclosure .icon-box-blue:hover {
   border-color: #2282ff;
 }
 
 /*--------------------------------------------------------------
+
+# Disclosure info
+--------------------------------------------------------------*/
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+#keywords h3 { 
+  /* color: #fff; */
+  border-radius: 5cm;
+  font-weight: bold;
+  text-align: left;
+}
+
+/** page structure **/
+#wrapper {
+  display: block;
+  width: 850px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10px 17px;
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: rgba(29, 29, 29, 0.8);
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  text-align: left;
+  padding-left: 42px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('https://i.imgur.com/SP99ZPJ.png');
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('https://i.imgur.com/RkA9MBo.png');
+}
+
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
+
 # Why Us
 --------------------------------------------------------------*/
 .why-us .container {
@@ -1107,18 +1178,18 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# Gallery
 --------------------------------------------------------------*/
-.portfolio {
+.gallery {
   padding-bottom: 60px;
 }
-.portfolio #portfolio-flters {
+.gallery #gallery-flters {
   padding: 0;
   margin: 0 0 35px 0;
   list-style: none;
   text-align: center;
 }
-.portfolio #portfolio-flters li {
+.gallery #gallery-flters li {
   cursor: pointer;
   margin: 0 12px 5px 12px;
   display: inline-block;
@@ -1131,11 +1202,11 @@ section {
   border-bottom: 2px solid #fff;
   font-family: "Roboto", sans-serif;
 }
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.gallery #gallery-flters li:hover, .gallery #gallery-flters li.filter-active {
   border-color: #68A4C4;
   color: #68A4C4;
 }
-.portfolio .portfolio-item {
+.gallery .gallery-item {
   background: #1e4356;
   overflow: hidden;
   min-height: 200px;
@@ -1143,10 +1214,10 @@ section {
   border-radius: 4px;
   margin: 0 0 30px 0;
 }
-.portfolio .portfolio-item img {
+.gallery .gallery-item img {
   transition: all 0.3s ease-in-out;
 }
-.portfolio .portfolio-item .portfolio-info {
+.gallery .gallery-item .gallery-info {
   opacity: 0;
   position: absolute;
   transition: all 0.3s linear;
@@ -1155,98 +1226,98 @@ section {
   left: 0;
   right: 0;
 }
-.portfolio .portfolio-item .portfolio-info h3 {
+.gallery .gallery-item .gallery-info h3 {
   font-size: 22px;
   color: #fff;
   font-weight: bold;
 }
-.portfolio .portfolio-item .portfolio-info a i {
+.gallery .gallery-item .gallery-info a i {
   color: rgba(255, 255, 255, 0.6);
   font-size: 28px;
   transition: 0.3s;
 }
-.portfolio .portfolio-item .portfolio-info a i:hover {
+.gallery .gallery-item .gallery-info a i:hover {
   color: white;
 }
-.portfolio .portfolio-item:hover img {
+.gallery .gallery-item:hover img {
   opacity: 0.6;
   transform: scale(1.1);
 }
-.portfolio .portfolio-item:hover .portfolio-info {
+.gallery .gallery-item:hover .gallery-info {
   opacity: 1;
   top: calc(50% - 30px);
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# gallery Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.gallery-details {
   padding-top: 40px;
 }
-.portfolio-details .portfolio-details-slider img {
+.gallery-details .gallery-details-slider img {
   width: 100%;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.gallery-details .gallery-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #68A4C4;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #68A4C4;
 }
-.portfolio-details .portfolio-info {
+.gallery-details .gallery-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(30, 67, 86, 0.08);
 }
-.portfolio-details .portfolio-info h3 {
+.gallery-details .gallery-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
-.portfolio-details .portfolio-info ul {
+.gallery-details .gallery-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
-.portfolio-details .portfolio-info ul li + li {
+.gallery-details .gallery-info ul li + li {
   margin-top: 10px;
 }
-.portfolio-details .portfolio-description {
+.gallery-details .gallery-description {
   padding-top: 30px;
 }
-.portfolio-details .portfolio-description h2 {
+.gallery-details .gallery-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.portfolio-details .portfolio-description p {
+.gallery-details .gallery-description p {
   padding: 0;
 }
 
 /*--------------------------------------------------------------
-# Team
+# staff
 --------------------------------------------------------------*/
-.team {
+.staff {
   background: #fff;
   padding-bottom: 30px;
 }
-.team .member {
+.staff .member {
   margin-bottom: 20px;
   overflow: hidden;
 }
-.team .member .member-img {
+.staff .member .member-img {
   position: relative;
   overflow: hidden;
 }
-.team .member .social {
+.staff .member .social {
   position: absolute;
   left: 0;
   bottom: -40px;
@@ -1260,25 +1331,25 @@ section {
   align-items: center;
   justify-content: center;
 }
-.team .member .social a {
+.staff .member .social a {
   transition: color 0.3s;
   color: #fff;
   margin: 0 12px;
   display: inline-block;
 }
-.team .member .social a:hover {
+.staff .member .social a:hover {
   color: #68A4C4;
 }
-.team .member .social i {
+.staff .member .social i {
   font-size: 18px;
   margin: 0 2px;
 }
-.team .member .member-info h4 {
+.staff .member .member-info h4 {
   font-weight: 700;
   margin: 15px 0 5px 0;
   font-size: 18px;
 }
-.team .member .member-info span {
+.staff .member .member-info span {
   display: block;
   font-size: 13px;
   text-transform: uppercase;
@@ -1286,18 +1357,18 @@ section {
   margin-bottom: 15px;
   color: #68A4C4;
 }
-.team .member .member-info p {
+.staff .member .member-info p {
   font-style: italic;
   font-size: 14px;
   line-height: 26px;
   color: #666;
 }
-.team .member:hover .social {
+.staff .member:hover .social {
   bottom: 0;
   opacity: 1;
   transition: bottom ease-in-out 0.4s;
 }
-.team .member:hover .social a, .team .member:hover .social i {
+.staff .member:hover .social a, .staff .member:hover .social i {
   line-height: 0;
   font-size: 18px;
 }
