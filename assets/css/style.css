@@ -1049,6 +1049,10 @@ img { border: 0; max-width: 100%; }
 .about p:last-child {
   margin-bottom: 0;
 }
+.about .row .img-fluid{
+  border-radius: 1cm;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.192);
+}
 
 /*--------------------------------------------------------------
 # Facts
@@ -1175,20 +1179,33 @@ img { border: 0; max-width: 100%; }
   margin-left: -30px;
   overflow: hidden;
   z-index: 9;
-  border-radius: 0;
+  border-radius: 1cm;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.192);
 }
 .service-details .card-img img {
   max-width: 100%;
   transition: all 0.3s ease-in-out;
+  border-radius: 1cm;
 }
 .service-details .card-body {
   z-index: 10;
   background: #fff;
   border-top: 4px solid #fff;
   padding: 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.192);
   margin-top: -60px;
   transition: 0.3s;
+  border-radius: 1cm;
+}
+.service-details .card-body:hover {
+  z-index: 10;
+  background: #fff;
+  border-top: 4px solid #fff;
+  padding: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.192);
+  margin-top: -60px;
+  transition: 0.3s;
+  border-radius: 2cm;
 }
 .service-details .card-title {
   font-weight: 700;
