@@ -4,8 +4,28 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444;
+  overflow: overlay;
 }
-
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+/* ::-webkit-scrollbar:hover {
+  width: 13px;
+  background: transparent;
+} */
+::-webkit-scrollbar-thumb {
+  background: #0094e396;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0093e3;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+  background: #0093e3;
+}
 a {
   color: #4fa6d5;
   text-decoration: none;
@@ -30,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #68A4C4;
+  background: #0093e3;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -42,7 +62,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #85b6cf;
+  background: #0094e383;
   color: #fff;
 }
 .back-to-top.active {
@@ -54,17 +74,17 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  height: 70px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #1e4356;
+  background: #0094e3d0;
 }
 #header.header-transparent {
   background: none;
 }
 #header.header-scrolled {
-  background: rgba(30, 67, 86, 0.8);
+  background: #0094e3b9;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(77, 77, 77, 0.459);
 }
@@ -136,8 +156,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   line-height: 0;
   margin-left: 5px;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #a2cce3;
+.navbar a:hover, .navbar .active, .navbar .active:focus {
+  color: #005583;
+}
+.navbar li:hover > a{
+  color: #0074b3;
 }
 .navbar .dropdown ul {
   display: block;
@@ -288,6 +311,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   padding: 0;
   border-radius: 2cm;
 }
+
 .faq .faq-list ul {
   padding: 0;
   list-style: none;
@@ -296,7 +320,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   margin-top: 15px;
 }
 .faq .faq-list li {
-  padding: 20px;
+  padding: 30px;
   background: #fff;
   border-radius: 4px;
   position: relative;
@@ -320,7 +344,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #255269;
+  color: #0094e386;
 }
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
   font-size: 24px;
@@ -336,7 +360,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   display: none;
 }
 .faq .faq-list a.collapsed {
-  color: #343a40;
+  color: #403434;
 }
 .faq .faq-list a.collapsed:hover {
   color: #34a5e2;
@@ -386,7 +410,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
-  background: #255269a1;
+  background: #0094e386;
   padding: 12px;
   color: #fff;
   border-radius: 50px;
@@ -446,7 +470,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   width: 130%;
   height: 96%;
-  background: #68A4C4;
+  background: #0093e3;
   opacity: 0.3;
   z-index: 0;
   border-radius: 0 0 50% 50%;
@@ -645,7 +669,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #68A4C4;
+  background: #0093e3;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -914,7 +938,7 @@ img { border: 0; max-width: 100%; }
 .why-us .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#68A4C4 50%, rgba(104, 164, 196, 0.4) 52%);
+  background: radial-gradient(#0094e3a2 50%, rgba(104, 164, 196, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -1227,16 +1251,16 @@ img { border: 0; max-width: 100%; }
   transition: 0.3s;
 }
 .service-details .read-more a:hover {
-  color: #68A4C4;
+  color: #0093e3;
 }
 .service-details .card:hover img {
   transform: scale(1.1);
 }
 .service-details .card:hover .card-body {
-  border-color: #68A4C4;
+  border-color: #0093e3;
 }
 .service-details .card:hover .card-body .card-title a {
-  color: #68A4C4;
+  color: #0093e3;
 }
 
 /*--------------------------------------------------------------
@@ -1371,7 +1395,16 @@ img { border: 0; max-width: 100%; }
   overflow: hidden;
   min-height: 200px;
   position: relative;
-  border-radius: 4px;
+  border-radius: 1cm;
+  transition: .6s;
+  margin: 0 0 30px 0;
+}
+.gallery .gallery-item:hover {
+  background: #1e4356;
+  overflow: hidden;
+  min-height: 200px;
+  position: relative;
+  border-radius: .5cm;
   margin: 0 0 30px 0;
 }
 .gallery .gallery-item img {
@@ -1462,7 +1495,35 @@ img { border: 0; max-width: 100%; }
   padding: 0;
 }
 
+/*--------------------------------------------------------------\
+# Scrollbar
+--------------------------------------------------------------*/
+/* html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(179, 177, 177);
+  width: 100px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  border-radius: 10px;
+} */
+
 /*--------------------------------------------------------------
+
 # staff
 --------------------------------------------------------------*/
 .staff {
@@ -1472,10 +1533,19 @@ img { border: 0; max-width: 100%; }
 .staff .member {
   margin-bottom: 20px;
   overflow: hidden;
+  box-shadow: 0 0 30px rgba(194, 193, 193, 0.6);
+  border-radius: 1cm;
 }
 .staff .member .member-img {
   position: relative;
   overflow: hidden;
+  border-radius: 1cm;
+  transition: .6s;
+}
+.staff .member .member-img:hover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .staff .member .social {
   position: absolute;
@@ -1508,6 +1578,8 @@ img { border: 0; max-width: 100%; }
   font-weight: 700;
   margin: 15px 0 5px 0;
   font-size: 18px;
+  margin-left: 1cm;
+  margin-right: 1cm;
 }
 .staff .member .member-info span {
   display: block;
@@ -1515,10 +1587,14 @@ img { border: 0; max-width: 100%; }
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 15px;
+  margin-left: 1cm;
+  margin-right: 1cm;
   color: #68A4C4;
 }
 .staff .member .member-info p {
   font-style: italic;
+  margin-left: 1cm;
+  margin-right: 1cm;
   font-size: 14px;
   line-height: 26px;
   color: #666;
@@ -1548,7 +1624,7 @@ img { border: 0; max-width: 100%; }
 }
 .contact .info-box i {
   font-size: 32px;
-  color: #68A4C4;
+  color: #0093e3;
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #a2cce3;
@@ -1613,7 +1689,7 @@ img { border: 0; max-width: 100%; }
   font-size: 14px;
 }
 .contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
-  background-color: #68A4C4;
+  background-color: #0093e3;
 }
 .contact .php-email-form input {
   padding: 10px 15px;
@@ -1622,7 +1698,7 @@ img { border: 0; max-width: 100%; }
   padding: 12px 15px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #68A4C4;
+  background: #0093e3;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -2080,7 +2156,7 @@ img { border: 0; max-width: 100%; }
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #0b212d;
+  background: #003653;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -2128,7 +2204,7 @@ img { border: 0; max-width: 100%; }
   background: #468db3;
 }
 #footer .footer-top {
-  background: #0d2735;
+  background: #002336;
   border-top: 1px solid #17455e;
   border-bottom: 1px solid #123649;
   padding: 60px 0 30px 0;
